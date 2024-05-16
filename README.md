@@ -1,2 +1,2 @@
 # 8-ball-sort
-This is a script to take a random triangle of balls from 1 to 15 and sort it according to professional pool rules.
+This is a script to accept an array of 15 numbers from 1-15 which represent a triangle of balls and sort it according to professional pool rules.
