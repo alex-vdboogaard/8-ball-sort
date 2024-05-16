@@ -33,7 +33,6 @@ function generateArr() {
     return random;
 }
 
-let random = generateArr();
 function solveTriangle(random) {
     //make an identical array of "solid" or "stripe" entries
     let identical = [];
@@ -99,9 +98,10 @@ function solveTriangle(random) {
 }
 
 function generateExample() {
+    document.querySelector("#random-wrapper").innerHTML = "";
     let myRandom = generateArr();
     showTriangle(myRandom);
-    showTriangle(solveTriangle(random));
+    showTriangle(solveTriangle(myRandom));
 };
 
 document.querySelector("#random").addEventListener("click", generateExample);
