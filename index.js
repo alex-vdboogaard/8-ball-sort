@@ -2,11 +2,11 @@ function showTriangle(arr) {
     let wrapper = document.createElement("div");
     wrapper.classList.add("triangle-wrapper");
     wrapper.innerHTML = `
-            <img src='https://github.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[0]}.png'> 
-            <div class="horizontal-balls"><img src='https://github.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[1]}.png'><img src='/images/individual-balls/${arr[2]}.png'></div>
-            <div class="horizontal-balls"><img src='https://github.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[3]}.png'><img src='/images/individual-balls/${arr[4]}.png'><img src='/images/individual-balls/${arr[5]}.png'></div>
-            <div class="horizontal-balls"><img src='https://github.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[6]}.png'><img src='/images/individual-balls/${arr[7]}.png'><img src='/images/individual-balls/${arr[8]}.png'><img src='/images/individual-balls/${arr[9]}.png'></div>
-            <div class="horizontal-balls"><img src='https://github.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[10]}.png'><img src='/images/individual-balls/${arr[11]}.png'><img src='/images/individual-balls/${arr[12]}.png'><img src='/images/individual-balls/${arr[13]}.png'><img src='/images/individual-balls/${arr[14]}.png'></div>`
+            <img src='https://raw.githubusercontent.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[0]}.png'> 
+            <div class="horizontal-balls"><img src='https://raw.githubusercontent.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[1]}.png'><img src='/images/individual-balls/${arr[2]}.png'></div>
+            <div class="horizontal-balls"><img src='https://raw.githubusercontent.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[3]}.png'><img src='/images/individual-balls/${arr[4]}.png'><img src='/images/individual-balls/${arr[5]}.png'></div>
+            <div class="horizontal-balls"><img src='https://raw.githubusercontent.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[6]}.png'><img src='/images/individual-balls/${arr[7]}.png'><img src='/images/individual-balls/${arr[8]}.png'><img src='/images/individual-balls/${arr[9]}.png'></div>
+            <div class="horizontal-balls"><img src='https://raw.githubusercontent.com/alex-vdboogaard/8-ball-sort/tree/main/images/individual-balls/${arr[10]}.png'><img src='/images/individual-balls/${arr[11]}.png'><img src='/images/individual-balls/${arr[12]}.png'><img src='/images/individual-balls/${arr[13]}.png'><img src='/images/individual-balls/${arr[14]}.png'></div>`
 
     document.querySelector("#random-wrapper").appendChild(wrapper);
 }
