@@ -49,7 +49,7 @@ p {
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-image: url("/images/triangle.png");
+    background-image: url("https://alex-vdboogaard.github.io/8-ball-sort/images/triangle.png");
     background-size: cover;
     background-position: center;
     overflow: hidden;
