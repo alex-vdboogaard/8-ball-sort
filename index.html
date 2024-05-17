@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8 Ball pool sorter</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <main>
@@ -33,9 +34,9 @@
         <img src="/images/8-ball-scrambled-2.png" alt="scrambled arrangement of pool balls with 8 ball in center">
         
         <h2>Step 4</h2>
-        <p>Now we identify which balls in our arrangement is out of place.</p>
+        <p>Now we identify which balls in our arrangement are out of place.</p>
         <p>To do this, we create a 'perfect' array filled with 'solid' and 'stripe' values.</p>
-        <p>Then we compare each value in the 'identical' array with the corresponding value in the 'perfect' array</p>
+        <p>Then we compare each value in the 'identical' array with the corresponding value in the 'perfect' array.</p>
         <img src="/images/code-snippet-4.png" alt="code snippet">
         <div class="horizontal">
             <div>
@@ -61,11 +62,17 @@
         <img src="/images/code-snippet-5.png" alt="code-snippet">
 
         <h2>Generate some random arrangements</h2>
-        <p>The random arrangement will be on the left and the sorted version will be on the right.</p>
+        <p>The random arrangement will be first and the sorted version will last.</p>
         <button id="random">Click here</button>
-        <div id="random-wrapper" class="horizontal">
-
+        <div id="random-wrapper" class="horizontal"></div>
+        
+        <h2>Run the simulation <input type="number" min="100" step="100" value="1000" max="10000" id="simulations"> times:</h2>
+        <button id="simulation">Click here</button>
+        <div style="margin-top: 30px;">
+            <canvas width="1200px" height="600px" id="canvas-1000"></canvas>
         </div>
+
+        <h2></h2>
     </main>
     <script src="/index.js"></script>
 </body>
