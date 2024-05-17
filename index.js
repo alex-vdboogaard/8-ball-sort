@@ -127,21 +127,6 @@ function generateExample() {
 
 document.querySelector("#random").addEventListener("click", generateExample);
 
-//simulation:
-function findAverage(arr) {
-    const n = arr.length;
-    if (n === 0) {
-        return 0; // Return 0 if the array is empty
-    }
-
-    let sum = 0;
-    for (let i = 0; i < n; i++) {
-        sum += arr[i];
-    }
-
-    return sum / n;
-}
-
 let myChart;
 function runSimulation() {
     const simulations = document.querySelector("#simulations").value;
@@ -194,6 +179,7 @@ function runSimulation() {
     });
     const average = findAverage(totals);
 };
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#simulation").addEventListener("click", runSimulation);
 });
