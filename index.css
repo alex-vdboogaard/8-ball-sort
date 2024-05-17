@@ -9,7 +9,8 @@ main {
 }
 
 a {
-    margin-right: 10px;
+    padding: 10px;
+    font-size: 25px;
 }
 
 img {
