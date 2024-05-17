@@ -10,70 +10,76 @@
 <body>
     <main>
         <h1>8 ball pool</h1>
+        <div class="horizontal"><a href="#code-walkthrough">Code walk through</a><a href="#generate">Generate examples</a><a href="#simulate">Run a simulation</a></div>
         <p>When you decide to play a game of pool, you take out the balls from the side of the table, then you put them together in the triangle.</p>
         <p>The balls now need to be sorted according to a specific pattern below. The 8 ball has to be in the center, but for the rest, only the ball's pattern must match.</p>
         <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-sorted.png" alt="image of sorted cue balls in a triangle">
 
-        <h2>Step 1</h2>
-        <p>Initialise the random arrangement:</p>
-        <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-1.png" alt="code snippet">
-        <p>This is an example of how the random arrangement would look like from our array:</p>
-        <p>[9, 7, 2, 3, 12, 10, 6, 4, 8, 14, 11, 13, 5, 1, 15]</p>
-        <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled.png" alt="scrambled arrangement of pool balls">
+        <section id="code-walkthrough">
+            <h2>Step 1</h2>
+            <p>Initialise the random arrangement:</p>
+            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-1.png" alt="code snippet">
+            <p>This is an example of how the random arrangement would look like from our array:</p>
+            <p>[9, 7, 2, 3, 12, 10, 6, 4, 8, 14, 11, 13, 5, 1, 15]</p>
+            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled.png" alt="scrambled arrangement of pool balls">
 
-        <h2>Step 2</h2>
-        <p>Now we should identify each number in the array as either a stripe or a solid</p>
-        <p>While we loop through the array, we also identify the position of the 8 ball in the scrambled array</p>
-        <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-2.png" alt="code snippet">
+            <h2>Step 2</h2>
+            <p>Now we should identify each number in the array as either a stripe or a solid</p>
+            <p>While we loop through the array, we also identify the position of the 8 ball in the scrambled array</p>
+            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-2.png" alt="code snippet">
 
-        <h2>Step 3</h2>
-        <p>The 8 ball has to be in the middle, so we must swap it with the center ball</p>
-        <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-3.png" alt="code snippet">
-        <p>Now we have this arrangement:</p>
-        <p>[9, 7, 2, 3, <b style="color: red;">8</b>, 10, 6, 4,<b style="color: red;">12</b>, 14, 11, 13, 5, 1, 15]</p>
-        <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled-2.png" alt="scrambled arrangement of pool balls with 8 ball in center">
-        
-        <h2>Step 4</h2>
-        <p>Now we identify which balls in our arrangement are out of place.</p>
-        <p>To do this, we create a 'perfect' array filled with 'solid' and 'stripe' values.</p>
-        <p>Then we compare each value in the 'identical' array with the corresponding value in the 'perfect' array.</p>
-        <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-4.png" alt="code snippet">
-        <div class="horizontal">
-            <div>
-                <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled-patterns.png" alt="8-ball-scrambled">
-                <p>This is our random arrangement</p>
+            <h2>Step 3</h2>
+            <p>The 8 ball has to be in the middle, so we must swap it with the center ball</p>
+            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-3.png" alt="code snippet">
+            <p>Now we have this arrangement:</p>
+            <p>[9, 7, 2, 3, <b style="color: red;">8</b>, 10, 6,4,<b style="color: red;">12</b>, 14, 11, 13, 5, 1, 15]</p>
+            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled-2.png" alt="scrambled arrangement of pool balls with 8 ball in center">
+            
+            <h2>Step 4</h2>
+            <p>Now we identify which balls in our arrangement are out of place.</p>
+            <p>To do this, we create a 'perfect' array filled with 'solid' and 'stripe' values.</p>
+            <p>Then we compare each value in the 'identical' array with the corresponding value in the 'perfect' array.</p>
+            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-4.png" alt="code snippet">
+            <div class="horizontal">
+                <div>
+                    <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled-patterns.png" alt="8-ball-scrambled">
+                    <p>This is our random arrangement</p>
+                </div>
+                <div>
+                    <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-sorted-patterns.png" alt="8-ball-sorted">
+                    <p>This is how our arrangement should look</p>
+                </div>
             </div>
             <div>
-                <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-sorted-patterns.png" alt="8-ball-sorted">
-                <p>This is how our arrangement should look</p>
+                <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled-wrong.png" alt="8-ball-scrambled">
+                <p>The highlighted balls in our arrangement are thus in the wrong position.</p>
             </div>
-        </div>
-        <div>
-            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/8-ball-scrambled-wrong.png" alt="8-ball-scrambled">
-            <p>The highlighted balls in our arrangement are thus in the wrong position.</p>
-        </div>
 
-        <h2>Step 5</h2>
-        <p>Every possible arrangement above will have either zero faults or a total faults (f) which is a multiple of 2.</p>
-        <p>This means that the most efficient way to sort the balls in x swaps is f/2</p>
-        <p>In the case above we can sort the arrangement in 6/2 = 3 swaps</p>
-        <p>To swap two balls, we must find a solid which is in the wrong place and a stripe which is also in the wrong place.</p>
-        <p>This is where the array of incorrect indexes will be used.</p>
-        <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-5.png" alt="code-snippet">
-
-        <h2>Generate some random arrangements</h2>
-        <p>The random arrangement will be first and the sorted version will last.</p>
-        <button id="random">Click here</button>
-        <div id="random-wrapper" class="horizontal"></div>
+            <h2>Step 5</h2>
+            <p>Every possible arrangement above will have either zero faults or a total faults (f) which is a multiple of 2.</p>
+            <p>This means that the most efficient way to sort the balls in x swaps is f/2</p>
+            <p>In the case above we can sort the arrangement in 6/2 = 3 swaps</p>
+            <p>To swap two balls, we must find a solid which is in the wrong place and a stripe which is also in the wrong place.</p>
+            <p>This is where the array of incorrect indexes will be used.</p>
+            <img src="https://alex-vdboogaard.github.io/8-ball-sort/images/code-snippet-5.png" alt="code-snippet">
+        </section>
         
-        <h2>Run the simulation <input type="number" min="100" step="100" value="1000" max="10000" id="simulations"> times:</h2>
-        <button id="simulation">Click here</button>
-        <div style="margin-top: 30px;">
-            <canvas width="1200px" height="600px" id="canvas-1000"></canvas>
-        </div>
+        <section id="generate">
+            <h2>Generate some random arrangements</h2>
+            <p>The random arrangement will be first and the sorted version will last.</p>
+            <button id="random">Click here</button>
+            <div id="random-wrapper" class="horizontal"></div>
+        </section>
 
-        <h2></h2>
+        <section id="simulate">
+            <h2>Run the simulation <input type="number" min="100" step="100" value="1000" max="10000" id="simulations"> times:</h2>
+            <button id="simulation">Click here</button>
+            <div style="margin-top: 30px;">
+                <canvas width="1200px" height="600px" id="canvas-1000"></canvas>
+            </div>
+        </section>
     </main>
+    
     <script src="https://alex-vdboogaard.github.io/8-ball-sort/index.js"></script>
 </body>
 </html>
